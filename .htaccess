@@ -1,0 +1,21 @@
+RewriteEngine On
+
+#------------------------------Route globale------------------------------
+RewriteRule ^login$ login.php
+RewriteRule ^admin$ admin.php
+RewriteRule ^index$ index.php
+
+#------------------------------Route View------------------------------
+RewriteRule ^routeContact$ View/pages/admin/contact/contact.php
+RewriteRule ^routefaq$ View/pages/admin/faq/faq.php
+RewriteRule ^routeAjouterEtudiant$ View/pages/admin/gestion/AjouterEtudiant.php
+RewriteRule ^routeAjouterEvaluation$ View/pages/admin/gestion/AjouterEvaluation.php
+RewriteRule ^routeAjouterNote$ View/pages/admin/gestion/AjouterNote.php
+RewriteRule ^routeListe$ View/pages/admin/liste/liste.php
+RewriteRule ^routeProfile$ View/pages/admin/profile/profile.php
+RewriteRule ^routeTableau$ View/pages/admin/tableauDeBord/tableau.php
+
+
+
+
+
