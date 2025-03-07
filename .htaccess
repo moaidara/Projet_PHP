@@ -15,6 +15,32 @@ RewriteRule ^routeListe$ View/pages/admin/liste/liste.php
 RewriteRule ^routeProfile$ View/pages/admin/profile/profile.php
 RewriteRule ^routeTableau$ View/pages/admin/tableauDeBord/tableau.php
 
+#------------------------------Route Controller------------------------------
+
+RewriteRule ^contactMainController$ Controller/contact/ContactMainController.php
+RewriteRule ^faqMainController$ Controller/faq/FaqMainController.php
+RewriteRule ^etudiantMainController$ Controller/gestion//Etudiant/EtudiantMainController.php
+RewriteRule ^evaluationMainController$ Controller/gestion/Evaluation/EvaluationMainController.php
+RewriteRule ^noteMainController$ Controller/gestion/Note/NoteMainController.php
+RewriteRule ^listeMainController$ Controller/liste/ListeMainController.php
+RewriteRule ^profileMainController$ Controller/profile/ProfileMainController.php
+RewriteRule ^tabMainController$ Controller/tableauDeBord/TabMainController.php
+RewriteRule ^userMainController$ Controller/user/UserMainController.php
+
+
+
+#------------------------------Route Model------------------------------
+
+
+RewriteRule ^contactRepository$ Model/ContactRepository.php
+RewriteRule ^faqRepository$ Model/FaqRepository.php
+RewriteRule ^etudiantRepository$ Model/EtudiantRepository.php
+RewriteRule ^evaluationRepository$ Model/EvaluationRepository.php
+RewriteRule ^noteRepository$ Model/NoteRepository.php
+RewriteRule ^listeRepository$ Model/ListeRepository.php
+RewriteRule ^profileRepository$ Model/ProfileRepository.php
+RewriteRule ^tabRepository$ Model/TabRepository.php
+RewriteRule ^userRepository$ Model/UserRepository.php
 
 
 

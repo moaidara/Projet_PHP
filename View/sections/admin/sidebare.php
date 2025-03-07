@@ -34,17 +34,11 @@
   </li><!-- End Forms Nav -->
 
   <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-layout-text-window-reverse"></i><span>Liste des Etudiants</span><i class="bi bi-chevron-down ms-auto"></i>
+    <a class="nav-link collapsed" href="routeListe">
+      <i class="bi bi-person"></i>
+      <span>Liste des Etudiants</span>
     </a>
-    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="routeListe">
-          <i class="bi bi-circle"></i><span>General Tables</span>
-        </a>
-      </li>
-    </ul>
-  </li><!-- End Tables Nav -->
+  </li><!-- End Profile Page Nav --> 
 
 
 
