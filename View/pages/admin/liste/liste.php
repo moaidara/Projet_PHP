@@ -69,17 +69,20 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Table with stripped rows</h5>
+              <h5 class="card-title">liste des etudiants</h5>
 
               <!-- Table with stripped rows -->
               <table class="table table-striped">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">photo</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">mail</th>
+                    <th scope="col">matricule</th>
+                    <th scope="col">adresse</th>
+                    <th scope="col">tel</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -113,6 +116,34 @@
                   </tr>
                   <tr>
                     <th scope="row">5</th>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Raheem Lehner</td>
+                    <td>Dynamic Division Officer</td>
+                    <td>47</td>
+                    <td>2011-04-19</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
                     <td>Raheem Lehner</td>
                     <td>Dynamic Division Officer</td>
                     <td>47</td>
