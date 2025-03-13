@@ -39,7 +39,7 @@
                 $email=trim($_POST['email'] ?? '');
                 $tel=trim($_POST['tel'] ?? '');
                 $matricule=trim($_POST['matricule'] ?? '');
-                $createdBy=trim($_POST['created_by'] ?? null);
+                $createdBy = $_SESSION['id'] ?? null;
 
                 // var_dump("$nom");//aficher 
                 // die;//stoped le code
@@ -52,7 +52,7 @@
                 }
 
                 //Recupre l'image 
-                $uploadDir="../../public/img/";
+                $uploadDir="../../../public/img/";
                 $photoName = uniqid().'_'.basename($photo['name']);//uniqid(). genere un id unique a chaque photo
                 $uploadPath=$uploadDir. $photoName;
 

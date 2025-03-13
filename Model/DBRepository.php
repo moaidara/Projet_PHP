@@ -1,6 +1,6 @@
 <?php
     class DBRepository{
-        private $db;
+        protected $db;
         private $db_Name;
         private $db_User;
         private $password;

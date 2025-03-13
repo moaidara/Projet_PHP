@@ -24,7 +24,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="adresse" class="form-label">Adresse</label>
-                    <input type="text" class="form-control" id="adresse" placeholder="Entrez l'adresse" name="prenom" required>
+                    <input type="text" class="form-control" id="adresse" placeholder="Entrez l'adresse" name="adresse" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
