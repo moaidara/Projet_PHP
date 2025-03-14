@@ -2,6 +2,22 @@
     require_once("DBRepository.php");
 
     class EtudiantRepository extends DBRepository{
+
+        public function getStudentById(int $id)
+        {
+            $sql = "SELECT * FROM etudiants WHERE id = :id";
+
+            try {
+                $statement = $this->db->prepare($sql);
+                $statement->bindParam(':id', $id, PDO::PARAM_INT);
+                $statement->execute();
+                return $statement->fetch(PDO::FETCH_ASSOC) ?: null;
+            } catch (PDOException $error) {
+                error_log("Erreur lors de la recupération de la réalisation/service d'id $id " . $error->getMessage());
+                throw $error;
+            }
+        }
+
         public function addStudent($nom, $prenom, $adresse, $email, $matricule, $tel, $photo, $createdBy){
             $sql = "INSERT INTO etudiants (nom, prenom, adresse, email, matricule, tel, photo, created_at, created_by)
                 VALUES (:nom, :prenom, :adresse, :email, :matricule, :tel, :photo, NOW(), :created_by)";

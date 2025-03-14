@@ -1,7 +1,10 @@
 <?php 
 
+    require_once("DBRepository.php");
+    
     class NoteRepository extends DBRepository{
 
+        
         public function addNote($id_etudiant, $id_evaluations, $note){
             $sql = "INSERT INTO notes (id_etudiant, id_evaluation, note ) VALUES (:id_etudiant, :id_evaluation, :note)";
             
