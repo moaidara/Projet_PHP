@@ -1,5 +1,5 @@
 <?php
-    require_once('DBRepository.php')
+    require_once('DBRepository.php');
 
     class UserRepository extends DBRepository{
         public function login($user, $password){
@@ -7,11 +7,11 @@
             
             try{
                 $statement = $this->db->prepare($sql);
-                $statement = $this->db->execute(['email' => $email]);
-                $user = $statement->fetch(PDO:FETCH_ASSOC);
+                $statement-> execute(['email' => $email]);
+                $user = $statement->fetch(PDO::FETCH_ASSOC);
             }catch(PDOException $error){
-                error_log("erreur lors de la connexion de l'utilisateur")
-                throw $error
+                error_log("erreur lors de la connexion de l'utilisateur");
+                throw $error;
             }
         }
 
@@ -70,23 +70,6 @@
             }
         }
 
-        public function getUserByEmail($email)
-        {
-            $sql = "SELECT * FROM users WHERE email = :email";
-
-            try {
-
-                $statement = $this->db->prepare($sql);
-                $statement->execute(['email' => $email]);
-                return $statement->fetch(PDO::FETCH_ASSOC) ?: null;
-
-            } catch (PDOException $error) {
-                error_log("Erreur lors de la recupération de l'utilisateurs d'email $email " . $error->getMessage());
-                throw $error;
-            }
-        }
-
-        //Récupérer un user via son email
         public function getUserByEmail($email)
         {
             $sql = "SELECT * FROM users WHERE email = :email";

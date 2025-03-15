@@ -21,20 +21,21 @@
                     <p class="text-center small">Entrer votre nom d'utilisateur et votre mot de passe</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" action="userMainController.php" method="POST" id="formLogin">
 
-                    <div class="col-12">
+
+                    <div class="form-group m-b-20">
                       <label for="yourUsername" class="form-label">Nom d'utilisateur</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
+                        <input type="email" id="email" name="email" class="form-control form-control-lg inverse-mode" placeholder="Entrer votre email" required />
                         <div class="invalid-feedback">S'il vous plait entrer le nom de l'utilisateur.</div>
                       </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="form-group m-b-20">
                       <label for="yourPassword" class="form-label">Mot de passe</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <input type="password" id="password" name="password"class="form-control form-control-lg inverse-mode" placeholder="Entrer votre mot de passe" required />
                       <div class="invalid-feedback">S'il vous plait ajouter votre mot de passe!</div>
                     </div>
 
@@ -44,8 +45,8 @@
                         <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
                       </div>
                     </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Connexion</button>
+                    <div class="login-buttons">
+                    <button class="btn btn-success btn-block btn-lg" name="formLogin" type="submit" id="btnSubmit">Connexion</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Avez-vous un compte? <a href="pages-register.html">Créer un compte</a></p>

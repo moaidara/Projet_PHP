@@ -9,10 +9,13 @@
   <?php  require_once ("View/sections/login/menu.php")?>
   </main><!-- End #main -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- section script -->
   <?php  require_once ("View/sections/login/script.php")?>
+
+  
+	<?php  require_once("View/sections/admin/msgErrorOrSuccess.php")?>
 
 </body>
 

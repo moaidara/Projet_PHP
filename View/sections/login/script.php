@@ -1,4 +1,3 @@
-
 <script src="public/templates/template_admin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="public/templates/template_admin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="public/templates/template_admin/NiceAdmin/assets/vendor/chart.js/chart.umd.js"></script>
@@ -9,4 +8,8 @@
   <script src="public/templates/template_admin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  
   <script src="public/templates/template_admin/NiceAdmin/assets/js/main.js"></script>
+
+  <script src="public/global/validator.js"></script>
+	<script src="public/users/login.js"></script>
