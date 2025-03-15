@@ -21,7 +21,7 @@
                     <p class="text-center small">Entrer votre nom d'utilisateur et votre mot de passe</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="userMainController.php" method="POST" id="formLogin">
+                  <form class="row g-3 needs-validation" action="userMainController" method="POST" id="formLogin">
 
 
                     <div class="form-group m-b-20">

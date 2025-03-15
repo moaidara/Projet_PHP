@@ -16,7 +16,7 @@
         }
     
         private function getConnexion(){
-            $dsn = "mysql:host={$this->host}; dbname={$this->db_Name}";
+            $dsn = "mysql:host={$this->host};dbname={$this->db_Name}";
             
             try{
                 $this->db = new PDO($dsn, $this->db_User, $this->password);

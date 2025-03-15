@@ -43,7 +43,7 @@ class UserController
                 }
 
                 // Permet de retourner un message de success
-        private function setSuccessAndRedirect($message, $title, $redirectUrl = 'admin.php')
+        private function setSuccessAndRedirect($message, $title, $redirectUrl = 'admin')
                 {
                     $_SESSION["success"] = $message;
                     header(
@@ -60,10 +60,9 @@ class UserController
                     if ($email == "admin@gmail.com" && $password == "modev1234") 
                     {
                         $_SESSION["id"] = 1;
-                        $_SESSION["nom"] = "Haidara";
+                        $_SESSION["nom"] = "mo";
                         $_SESSION["email"] = $email;
                         $_SESSION["etat"] = 1;
-                        $_SESSION["photo"] = "default.png";
 
                         $this->setSuccessAndRedirect(
                             "Bienvenue sur le Tableau de bord", 
