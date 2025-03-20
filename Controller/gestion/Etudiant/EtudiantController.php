@@ -35,16 +35,16 @@
                 $nom=trim($_POST['nom'] ?? '');
                 $prenom=trim($_POST['prenom'] ?? '');
                 $adresse=trim($_POST['adresse'] ?? '');
-                $photo=$_FILES['photo'];
+                $photo=$_FILES['photo'] ?? null;
                 $email=trim($_POST['email'] ?? '');
                 $tel=trim($_POST['tel'] ?? '');
                 $matricule=trim($_POST['matricule'] ?? '');
-                $createdBy = $_SESSION['id'] ?? null;
+                $createdBy = trim($_POST['created_by'] ?? '');
 
                 // var_dump("$nom");//aficher 
                 // die;//stoped le code
 
-                if(empty($nom)||empty($photo)||empty($prenom)||empty($adresse)||empty($email)||empty($tel)||empty($matricule)){
+                if(empty($nom)||empty($photo['name'])||empty($prenom)||empty($adresse)||empty($email)||empty($tel)||empty($matricule)){
                     $this->setErrorAndRedirect(
                         "Tous les Champs sont requis",
                         "Erreur d'ajout"
@@ -85,5 +85,14 @@
 
             }
         }
+
+        // public function afficherStudent()
+        // {
+        //     // Récupérer les utilisateurs actifs
+        //     $users = $this->etudiantRepository->listeStudent();
+            
+        //     // Envoyer les utilisateurs à la vue
+        //     return $users;
+        // }
     }
 ?>

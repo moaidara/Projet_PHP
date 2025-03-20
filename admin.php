@@ -4,7 +4,7 @@
  <?php  require_once ("View/sections/admin/head.php")?>
 
 <body>
-
+<?php require_once("View/sections/admin/verifierSession.php")?>
   <!-- ======= Section Header ======= -->
   <?php  require_once ("View/sections/admin/header.php")?>
 

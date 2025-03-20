@@ -43,5 +43,17 @@
                 throw $error;
             }
         }
+        public function listeStudent(){
+            $sql = "SELECT id, nom, prenom, email, adresse, matricule, tel  FROM users WHERE etat = 1";
+            
+            try{
+                $statement = $this->db->prepare($sql);
+                $statement-> execute();
+                $user = $statement->fetch(PDO::FETCH_ASSOC);
+            }catch(PDOException $error){
+                error_log("erreur lors de la recuperation des informations");
+                throw $error;
+            }
+        }
     }
 ?>

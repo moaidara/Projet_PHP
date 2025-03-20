@@ -107,18 +107,10 @@
 				                    <!-- <li class="breadcrumb-item">
                             </li> -->
 
-                              <button class="btn btn-primary btn-sm edit-btn" data-bs-toggle="modal" data-bs-target="#modal-alert"
-                                  data-id="<?= htmlspecialchars($etud['id']) ?>"
-                                  data-nom="<?= htmlspecialchars($etud['nom']) ?>"
-                                  data-prenom="<?= htmlspecialchars($etud['prenom']) ?>"
-                                  data-adresse="<?= htmlspecialchars($etud['adresse']) ?>"
-                                  data-email="<?= htmlspecialchars($etud['email']) ?>"
-                                  data-matricule="<?= htmlspecialchars($etud['matricule']) ?>"
-                                  data-tel="<?= htmlspecialchars($etud['tel']) ?>">
+                              <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-alert">
                                 <i class="bi bi-pencil-square"></i>
                               </button>
-                              <button class="btn btn-danger btn-sm delete-stu" data-bs-toggle="modal" data-bs-target="#Delete"
-                                data-id="<?= htmlspecialchars($etud['id']) ?>">
+                              <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal-alert">
                                 <i class="bi bi-archive"></i>
                               </button>
                               
@@ -146,74 +138,21 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Modifier</h4>
+          <h4 class="modal-title">Alert Header</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         </div>
         <div class="modal-body">
-            <form action="listeMainController" method="post" enctype="multipart/form-data">
-                <input type="hidden" id="student-id" name="id">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="prenom" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" required>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="adresse" class="form-label">Adresse</label>
-                    <input type="text" class="form-control" id="adresse" name="adresse" required>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="matricule" class="form-label">Matricule</label>
-                        <input type="text" class="form-control" id="matricule" name="matricule" required>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="tel" class="form-label">Téléphone</label>
-                    <input type="tel" class="form-control" id="tel" name="tel" required>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-danger" name="frmModify">Action</button>
-                </div>
-            </form>
-
+          <div class="alert alert-danger m-b-0">
+            <h5><i class="fa fa-info-circle"></i> Alert Header</h5>
+            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          </div>
         </div>
-        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="javascript:;" class="btn btn-danger" data-dismiss="modal">Action</a>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="modal fade" id="Delete" tabindex="-1" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="confirmDeleteLabel">Confirmer la suppression</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  
-                  <p>Êtes-vous sûr de vouloir supprimer ? Cette action est irréversible.</p>
-                  <form action="listeMainController" method="post" enctype="multipart/form-data">
-                    <input type="hidden" id="student-id" name="id">
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                        <button type="submit" class="btn btn-danger" name = "frmDelete">Confirmer</button>
-                    </div>
-                  </form>  
-              </div>
-              
-          </div>
-      </div>
   </div>
   </main><!-- End #main -->
 
@@ -245,27 +184,7 @@
 
   <!-- Template Main JS File -->
   <script src="public/templates/template_admin/NiceAdmin/assets/js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          document.querySelectorAll(".edit-btn").forEach(button => {
-              button.addEventListener("click", function () {
-                  document.getElementById("student-id").value = this.dataset.id;
-                  document.getElementById("nom").value = this.dataset.nom;
-                  document.getElementById("prenom").value = this.dataset.prenom;
-                  document.getElementById("adresse").value = this.dataset.adresse;
-                  document.getElementById("email").value = this.dataset.email;
-                  document.getElementById("matricule").value = this.dataset.matricule;
-                  document.getElementById("tel").value = this.dataset.tel;
-              });
-          });
-          document.querySelectorAll(".delete-stu").forEach(button => {
-            button.addEventListener("click", function () {
-                document.querySelector("#Delete #student-id").value = this.dataset.id;
-            });
-        });
-      });
-  </script>
+
 </body>
 
 </html>

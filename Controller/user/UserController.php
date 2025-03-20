@@ -108,30 +108,32 @@ class UserController
                 }
 
         public function auth()
-                {
-                    if($_SERVER["REQUEST_METHOD"]=="POST")
-                    {
-                        $email=$_POST["email"];
-                        $password=$_POST["password"];
+        {
+            if($_SERVER["REQUEST_METHOD"]=="POST")
+            {
+                $email=$_POST["email"];
+                $password=$_POST["password"];
 
-                        //Validation des champs du formulaire de connexion
-                        $messageError=$this->validateLoginField($email,$password);
+                //Validation des champs du formulaire de connexion
+                $messageError=$this->validateLoginField($email,$password);
 
-                        if($messageError){
-                            $this->setErrorAndRedirect($messageError,"Erreur de validation");
-                        }
-
-                        //Authentifie le super administrateur 
-
-                        if($this->authSuperAdmin($email,$password)){
-                            return;
-                        }
-
-                        //Authentifi un admin
-
-                        $this->authAdmin($email,$password,$this->userRepository);
-                    }
+                if($messageError){
+                    $this->setErrorAndRedirect($messageError,"Erreur de validation");
                 }
+
+                //Authentifie le super administrateur 
+
+                if($this->authSuperAdmin($email,$password)){
+                    return;
+                }
+
+                //Authentifi un admin
+
+                $this->authAdmin($email,$password,$this->userRepository);
+            }
+        }
+
+        
 
         public function logout()
                 {
